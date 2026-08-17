@@ -1,0 +1,319 @@
+
+:root {
+    --bg: #0d0d0f;
+    --surface: #17161a;
+    --surface-hover: #1f1e23;
+    --border: #2a282e;
+    --terracotta: #c9603c;
+    --terracotta-light: #e08a5f;
+    --text: #f2f0ec;
+    --text-secondary: #9a958c;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+
+    background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-attachment: fixed;
+    opacity: 1;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+a {
+    color: var(--terracotta-light);
+    text-decoration: none;
+}
+
+/* ===== HEADER / NAV ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(13, 13, 15, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--terracotta-light);
+}
+
+/* Empurra o conteúdo pra baixo do header fixo */
+body {
+    padding-top: 80px;
+}
+
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    scroll-margin-top: 80px;
+}
+
+/* ===== TÍTULOS DE SEÇÃO ===== */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+section h2::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 28px;
+    background: var(--terracotta);
+    transform: skewX(-15deg);
+}
+
+/* ===== CANTONEIRAS TÉCNICAS (assinatura visual) ===== */
+.corner-frame {
+    position: relative;
+}
+
+.corner-frame::before,
+.corner-frame::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid var(--terracotta);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.corner-frame::before {
+    top: -1px;
+    left: -1px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.corner-frame::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: none;
+    border-top: none;
+}
+
+.corner-frame:hover::before,
+.corner-frame:hover::after {
+    opacity: 1;
+}
+
+/* ===== CARD BASE (usado por stats, experience, skills, achievements) ===== */
+.stat-item,
+.experience-card,
+.skill-category,
+.achievement-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.stat-item:hover,
+.experience-card:hover,
+.skill-category:hover,
+.achievement-card:hover {
+    border-color: var(--terracotta);
+    transform: translateY(-2px);
+}
+
+/* ===== ABOUT — STATS ===== */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--terracotta-light);
+}
+
+.stat-label {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+}
+
+/* ===== EXPERIENCE ===== */
+.experience-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.experience-header h3 {
+    font-size: 1.1rem;
+}
+
+.experience-org {
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.experience-date {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--terracotta-light);
+    background-color: rgba(201, 96, 60, 0.1);
+    border: 1px solid rgba(201, 96, 60, 0.3);
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.experience-subtitle {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 8px 0 16px;
+}
+
+.experience-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.experience-bullets li {
+    padding-left: 18px;
+    position: relative;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.experience-bullets li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--terracotta);
+}
+
+/* ===== TAGS (compartilhado: experience + skills) ===== */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    background-color: var(--surface-hover);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+/* ===== SKILLS ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.skill-category h3 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: var(--terracotta-light);
+}
+
+/* ===== ACHIEVEMENTS ===== */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.achievement-card h3 {
+    font-size: 1rem;
+}
+
+.achievement-card p {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+}
