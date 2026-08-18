@@ -1,4 +1,8 @@
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --bg: #0d0d0f;
     --surface: #17161a;
@@ -26,11 +30,10 @@ body {
     line-height: 1.6;
 
     background-image:
-        linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+        linear-gradient(rgba(201, 96, 60, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201, 96, 60, 0.06) 1px, transparent 1px);
     background-size: 48px 48px;
     background-attachment: fixed;
-    opacity: 1;
 }
 
 h1, h2, h3 {
@@ -316,4 +319,15 @@ section h2::before {
     font-size: 0.85rem;
     color: var(--text-secondary);
     font-family: var(--font-mono);
+}
+
+/* ===== PARÁGRAFOS ===== */
+section p {
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+    max-width: 700px;
+}
+
+section p:last-of-type {
+    margin-bottom: 0;
 }
