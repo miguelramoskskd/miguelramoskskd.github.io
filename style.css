@@ -427,3 +427,77 @@ section p:last-of-type {
     font-size: 0.75rem;
     font-weight: 700;
 }
+
+/* ===== RESPONSIVIDADE — TABLET (até 768px) ===== */
+@media (max-width: 768px) {
+    nav {
+        padding: 16px 20px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ===== RESPONSIVIDADE — CELULAR (até 480px) ===== */
+@media (max-width: 480px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 0.7rem;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .stat-number {
+        font-size: 1.4rem;
+    }
+
+    .experience-card,
+    .skill-category,
+    .achievement-card {
+        padding: 18px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-pill {
+        justify-content: center;
+    }
+}
