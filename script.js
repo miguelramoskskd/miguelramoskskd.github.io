@@ -74,3 +74,19 @@ modal.addEventListener('click', (event) => {
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') closeModal();
 });
+
+
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navLinks = document.getElementById('nav-links');
+
+hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-links a').forEach((link) => {
+    link.addEventListener('click', () => {
+        hamburgerBtn.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
