@@ -30,13 +30,20 @@
     <h1>Miguel Ramos</h1>
     <p class="hero-tagline">Estudante de Ciência e Tecnologia / Engenharia da Computação @UNIFESP Pesquisador em Visão Computacional @INPE</p>
 
-    <div class="hero-links">
-        <a href="https://github.com/miguelramoskskd" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <span class="dot">·</span>
-        <a href="https://www.linkedin.com/in/miguelotavioramos" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <span class="dot">·</span>
-        <a href="mailto:migueoct.ramos@gmail.com">Email</a>
-    </div>
+   <div class="hero-links">
+    <a href="https://github.com/miguelramoskskd" target="_blank" rel="noopener noreferrer" class="hero-link">
+        <span class="contact-icon">&lt;/&gt;</span>
+        GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/miguelotavioramos" target="_blank" rel="noopener noreferrer" class="hero-link">
+        <span class="contact-icon">in</span>
+        LinkedIn
+    </a>
+    <a href="mailto:migueoct.ramos@gmail.com" class="hero-link">
+        <span class="contact-icon">✉</span>
+        migueloct.ramos@gmail.com
+    </a>
+</div>
 
     <a href="#" class="resume-btn corner-frame">
         <span class="contact-icon">↓</span>
@@ -53,7 +60,7 @@
                 Sou estudante de Ciência e Tecnologia / Engenharia da Computação no <strong> Instituto de Ciência e Tecnologia UNIFESP</strong>, São José dos Campos.
             </p>
             <p>
-            Trabalho no desenvolvimento de um software para identificação de raios a partir do processamento de imagens, através de uma bolsa de iniciação científica no <strong>Instituto Nacional de Pesquisas Espaciais (INPE)</strong>. Atualmente também coordeno o Clube Juvenil 14 Bis, um local destinado para a formação técnica e emocional de crianças e adolescentes.
+            Trabalho na pesquisa e desenvolvimento de um software para identificação de raios a partir do processamento de imagens no <strong>Instituto Nacional de Pesquisas Espaciais (INPE)</strong>. Atualmente também coordeno o Clube Juvenil 14 Bis, um local destinado para a formação técnica e emocional de crianças e adolescentes.
             </p>
             <p>
                 Tenho interesse em robótica, inteligência artificial, computação em nuvem, ciências espaciais, linguística e outros assuntos do meio STEM. 
@@ -61,7 +68,7 @@
                 Quando era pequeno admirava as tecnologias presentes nos filmes de ficção científica e heróis, aquilo tudo me motivava a descobrir mais. Com o passar do tempo, aquilo se tornou parte da minha realidade. 
             </p>
             <p>
-            Aí fui percebendo através de minhas experiências em pesquisa científica, mentoria em robótica e educação de jovens que a tecnologia é muito importante quando é utilizada para resolver problemas reais e gerar impacto na vida das pessoas. É isso que me motiva.
+            Percebi através de minhas experiências em pesquisa científica, mentoria em robótica e educação de jovens que a tecnologia é muito importante quando utilizada para resolver problemas reais e gerar impacto na vida das pessoas. É isso que me motiva.
             </p>
         </div>
 
@@ -101,7 +108,7 @@
         <div class="experience-card corner-frame">
             <div class="experience-header">
                 <div>
-                    <h3>Pesquisador em Visão Computacional Aplicada à Detecção de Raios  <span class="experience-org">· INPE (Instituto Nacional de Pesquisas
+                    <h3>Pesquisador em Visão Computacional <span class="experience-org">· INPE (Instituto Nacional de Pesquisas
                             Espaciais)</span></h3>
                 </div>
                 <span class="experience-date">Set 2026 — Atualidade</span>
@@ -117,6 +124,7 @@
                 <span class="tag">YOLO / Ultralytics</span>
                 <span class="tag">Processamento de Imagens</span>
             </div>
+            <button class="gallery-btn" data-gallery="ic-2026">Veja Fotos</button>
         </div>
 
         <div class="experience-card corner-frame">
@@ -146,7 +154,8 @@
                 <span class="tag">Research Projects</span>
                 <span class="tag">FLIR Tools</span>
                 <span class="tag">Organização de Dados</span>
-            </div>  
+            </div>
+            <button class="gallery-btn" data-gallery="pibic-2025">Veja Fotos</button>
         </div>
 
         <div class="experience-card corner-frame">
@@ -184,6 +193,7 @@
                 <span class="tag">PDCA</span>
                 <span class="tag">Kanban</span>
             </div>
+            <button class="gallery-btn" data-gallery="fll">Veja Fotos</button>
         </div>
 
     </div>
@@ -309,3 +319,14 @@
         </a>
     </div>
 </section>
+
+
+<div class="modal-overlay" id="image-modal">
+    <div class="modal-box corner-frame">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <h3 class="modal-title" id="modal-title"></h3>
+        <div class="modal-grid" id="modal-grid"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>

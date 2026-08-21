@@ -124,22 +124,22 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 24px;
+    flex-wrap: wrap;
     font-family: var(--font-mono);
     font-size: 0.9rem;
 }
 
-.hero-links a {
+.hero-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: var(--text-secondary);
     transition: color 0.2s ease;
 }
 
-.hero-links a:hover {
+.hero-link:hover {
     color: var(--terracotta-light);
-}
-
-.hero-links .dot {
-    color: var(--border);
 }
 
 .resume-btn {
@@ -560,3 +560,123 @@ section p:last-of-type {
     }
 }
 
+/* ===== BOTÃO DE GALERIA NOS CARDS ===== */
+.experience-card {
+    padding-bottom: 70px;
+}
+
+.gallery-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background-color: var(--surface-hover);
+    border: 1px solid var(--border);
+    color: var(--terracotta-light);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.gallery-btn:hover {
+    border-color: var(--terracotta);
+    transform: translateY(-2px);
+}
+
+/* ===== MODAL — GRID DE FOTOS ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(13, 13, 15, 0.92);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 200;
+    padding: 24px;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-box {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 32px;
+    max-width: 900px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.modal-title {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+    padding-right: 30px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: var(--terracotta-light);
+}
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.modal-slot {
+    aspect-ratio: 1 / 1;
+    background-color: var(--surface-hover);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.modal-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.modal-slot.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-slot.empty::after {
+    content: "Foto em breve";
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+    .modal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
