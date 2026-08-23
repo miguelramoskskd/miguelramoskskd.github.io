@@ -13,12 +13,12 @@ const galleries = {
     'pibic-2025': {
         title: 'Bolsista PIBIC-EM — INPE',
         images: [
-            'images/experience/pibic-2025-1.jpg',
-            'images/experience/pibic-2025-2.jpg',
-            'images/experience/pibic-2025-3.jpg',
-            'images/experience/pibic-2025-4.jpg',
-            'images/experience/pibic-2025-5.jpg',
-            'images/experience/pibic-2025-6.jpg',
+            'images/experience/pibic01.png',
+            'images/experience/pibic02.png',
+            'images/experience/pibic03.png',
+            'images/experience/pibic04.png',
+            'images/experience/pibic05.png',
+            'images/experience/pibic06.png',
         ],
     },
     'fll': {
@@ -28,7 +28,7 @@ const galleries = {
             'images/experience/quark03.jfif',
             'images/experience/quark02.jfif',
             'images/experience/quark04.jpeg',
-            'images/experience/quark05.jpeg',
+            'images/experience/quark05.png',
             'images/experience/quark06.jpeg',
         ],
     },
