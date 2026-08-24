@@ -408,6 +408,14 @@ section p:last-of-type {
     border: 1px solid var(--border);
     border-radius: 8px;
     position: relative;
+    overflow: hidden;
+}
+
+.about-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .about-avatar::before,
@@ -753,4 +761,49 @@ section p:last-of-type {
     .nav-links a {
         text-align: center;
     }
+}
+
+/* ===== EFEITO NEON GIRANDO NO AVATAR ===== */
+.avatar-glow {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    padding: 3px;
+    overflow: hidden;
+}
+
+.avatar-glow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        var(--terracotta-light) 20deg,
+        transparent 60deg,
+        transparent 300deg,
+        var(--terracotta) 340deg,
+        transparent 360deg
+    );
+    animation: rotate-glow 4s linear infinite;
+}
+
+@keyframes rotate-glow {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.avatar-glow .about-avatar {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
 }
