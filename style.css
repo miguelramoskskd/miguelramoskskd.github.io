@@ -146,11 +146,11 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    margin-top: 28px;
+    height: 56px;
     background-color: var(--surface);
     border: 1px solid var(--border);
     border-radius: 30px;
-    padding: 12px 22px;
+    padding: 0 22px;
     font-family: var(--font-mono);
     font-size: 0.9rem;
     color: var(--text);
@@ -806,4 +806,40 @@ section p:last-of-type {
     z-index: 1;
     width: 100%;
     height: 100%;
+}
+
+/* ===== HERO — CURRÍCULO + LOGOS, LADO A LADO ===== */
+.hero-badges {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.institution-logo {
+    width: 56px;
+    height: 56px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.institution-logo:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--terracotta);
+}
+
+.institution-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
