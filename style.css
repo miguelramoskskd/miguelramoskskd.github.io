@@ -821,18 +821,18 @@ section p:last-of-type {
 .institution-logo {
     width: 56px;
     height: 56px;
-    background-color: rgba(255, 255, 255, 0.06);
-    border: 1px solid var(--border);
+    background-color: rgba(201, 96, 60, 0.1);
+    border: 1px solid rgba(201, 96, 60, 0.3);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 3px;
     transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .institution-logo:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(201, 96, 60, 0.18);
     border-color: var(--terracotta);
 }
 
