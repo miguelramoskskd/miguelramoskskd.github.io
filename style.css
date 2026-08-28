@@ -107,6 +107,7 @@ section {
     margin: 0 auto;
     padding: 160px 24px 80px;
     text-align: center;
+    position: relative;
 }
 
 .hero h1 {
@@ -445,10 +446,17 @@ section p:last-of-type {
     .about-grid {
         grid-template-columns: 1fr;
     }
-    .about-avatar {
-        order: -1;
-        max-width: 220px;
+
+    .avatar-glow {
+        width: 100%;
+        max-width: 280px;
+        aspect-ratio: 1 / 1;
+        height: auto;
         margin: 0 auto;
+    }
+
+    .about-avatar {
+        height: 100%;
     }
 }
 
@@ -565,6 +573,22 @@ section p:last-of-type {
 
     .contact-pill {
         justify-content: center;
+    }
+
+    .hero-badges {
+        gap: 8px;
+    }
+
+    .resume-btn {
+        height: 44px;
+        padding: 0 14px;
+        font-size: 0.8rem;
+    }
+
+    .institution-logo {
+        width: 44px;
+        height: 44px;
+        padding: 6px;
     }
 }
 
