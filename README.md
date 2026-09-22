@@ -12,9 +12,9 @@ Esse repositório é o código-fonte do meu portfólio pessoal, construído do z
 
 Comecei esse site sem saber quase nada de front-end. Vivemos em uma época em que uma página HTML/CSS/JS pode ser gerada em segundos por IA. Isso me deixou curioso, e aí a ideia inicial era entender o que realmente acontece por trás de um site comum. 
 
-Cada seção — o menu, os cards de experiência, a galeria de fotos foi construída por mim com apoio do Claude, entendendo o porquê de cada linha antes de escrever a próxima.
+O menu, os cards de experiência, a galeria de fotos foi construída por mim com apoio do Claude, entendendo o porquê de cada linha antes de escrever a próxima.
 
-A estética se inspira em Blade Runner: fundo escuro, tons terracota, e pequenos detalhes técnicos (as "cantoneiras" nos cards) que remetem à análise de imagem — uma referência direta ao meu trabalho com visão computacional no INPE.
+A estética se inspira em Blade Runner: fundo escuro, tons terracota, e pequenos detalhes técnicos (as "cantoneiras" nos cards) que remetem à análise de imagem e meu trabalho no INPE.
 
 ## O que tem aqui dentro
 
@@ -28,7 +28,7 @@ A estética se inspira em Blade Runner: fundo escuro, tons terracota, e pequenos
 
 ## Stack
 
-`HTML5` · `CSS3` (Grid, Flexbox, animações) · `JavaScript` vanilla · API pública do GitHub
+`HTML5` · `CSS3` (Grid, Flexbox, animações) · `JavaScript` vanilla 
 
 ## Rodando localmente
 
